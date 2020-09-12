@@ -3,7 +3,7 @@
     <app-header></app-header>
     <hr />
     <div class="row">
-      <app-servers></app-servers>
+      <servers></servers>
       <app-server-details></app-server-details>
     </div>
     <hr />
@@ -19,8 +19,10 @@ import ServerDetails from "./components/server/ServerDetails.vue";
 
 export default {
   components: {
-    "app-header": Header,
-    "app-servers": Servers,
+    // Since using single-file component, don't have DOM restriction of case insensitivity (which would be the case when using the template property or inferring template with el). Single-file template is compiled to JS before it runs in browser; can use case-sensitive selectors because JS is case insensitive. Vue.js automatically gives us access to hyphenated version of selector in template; can be formmatted with a hyphen despite being camel cased in script
+    appHeader: Header,
+    // ES6 destructuring
+    Servers,
     "app-server-details": ServerDetails,
     "app-footer": Footer,
   },
