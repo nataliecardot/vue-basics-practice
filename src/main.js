@@ -1,10 +1,6 @@
 import Vue from "vue";
 // App is like the root Vue instance that gets rendered in this file. It's like a component that isn't placed with a selector, but instead, simply like a replacement for the instance objects
 import App from "./App.vue";
-import Home from "./Home.vue";
-
-// Register component globally (can be used in whole application, including root Vue instance file App.vue)
-Vue.component("app-servers", Home);
 
 new Vue({
   el: "#app",
